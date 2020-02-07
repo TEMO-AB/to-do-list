@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-const Todos = ({ todos }) => {
+const Todos = ({ todos, deleteTodo }) => {
 
     const todoList = todos.lenght ? (
         todos.map(todo => {
             return (
-                <div className="collection-item" key={todo.id}>
+                <div className="collection-item" key={todos.id}>
                     <span>{todo.content}</span>
                 </div>
             )
@@ -16,7 +16,7 @@ const Todos = ({ todos }) => {
         );
     return (
         <div className="todos collection">
-
+            {todoList}
 
         </div>
     );
